@@ -24,6 +24,9 @@ import java.util.Random;
  */
 public class Main {
 
+    // Instanciar Random
+    public static final Random RND = new Random();
+
     /**
      * @param args the command line arguments
      */
@@ -32,17 +35,14 @@ public class Main {
         final double ALTURA_MIN = 0.50;
         final double ALTURA_MAX = 2.50;
 
-        // Instanciar Random
-        Random rnd = new Random();
-
         // Variable
         double altura;
 
         // Generar dato
-        altura = rnd.nextDouble() * (ALTURA_MAX - ALTURA_MIN) + ALTURA_MIN;
+        altura = RND.nextDouble() * (ALTURA_MAX - ALTURA_MIN) + ALTURA_MIN;
 
         // Mensaje
         System.out.printf(Locale.ENGLISH,
-                "Altura aleatoria ..........: %.2f metros\n", altura);
+                "Altura aleatoria ..........: %.2f metros%n", altura);
     }
 }
